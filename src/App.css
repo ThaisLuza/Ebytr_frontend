@@ -64,3 +64,13 @@ hr {
   flex-direction: column;
   align-items: center;
 }
+
+th:hover {
+  cursor: pointer;
+  background-color: #d6f7f1;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+}

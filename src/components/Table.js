@@ -86,17 +86,16 @@ function Table() {
   };
 
   const excluir = (item) => {
-    console.log(item);
     const arr = [...data];
     axios
       .delete(`http://localhost:9000/list/${item.id}`)
       .then(() => {
         arr.splice(arr.indexOf(item), 1);
+        setFilteredData(arr)
         setData(arr);
       })
       .catch((error) => {
         setError(true);
-        console.log(error);
       });
   };
 
